@@ -59,7 +59,7 @@
 		785C76BA2BE20B7F00E4B7AE /* MIBottomDrawer */ = {
 			isa = PBXGroup;
 			children = (
-				785C76E52BE20BCC00E4B7AE /* MIDrawer */,
+				785C76E52BE20BCC00E4B7AE /* Source */,
 				785C76BB2BE20B7F00E4B7AE /* MIBottomDrawerApp.swift */,
 				785C76BD2BE20B7F00E4B7AE /* ContentView.swift */,
 				785C76BF2BE20B8100E4B7AE /* Assets.xcassets */,
@@ -76,7 +76,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		785C76E52BE20BCC00E4B7AE /* MIDrawer */ = {
+		785C76E52BE20BCC00E4B7AE /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				785C76E62BE20BED00E4B7AE /* MIBottomDrawer.swift */,
@@ -84,7 +84,7 @@
 				785C76E72BE20BED00E4B7AE /* MIBottomDrawer+DragGesture.swift */,
 				785C76E82BE20BED00E4B7AE /* MIBottomDrawer+Modifiers.swift */,
 			);
-			path = MIDrawer;
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
