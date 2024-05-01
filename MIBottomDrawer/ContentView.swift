@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isDrawerOpen = false
+    @State private var isDrawerOpen = true
     
     var body: some View {
-        ZStack {
+        VStack {
             VStack {
                 Text("Drag bottom drawer...!!")
             }
+            
+            Button("Open Drawer") {
+                withAnimation(.easeInOut) {
+                    self.isDrawerOpen.toggle()
+                }
+            }
+            
             MIBottomDrawer {
                 VStack(alignment: .center) {
                     Button("Close Drawer") {
@@ -28,7 +35,7 @@ struct ContentView: View {
                     
                 }
             }
-            .snapPoint(at: .constant([450, UIScreen.main.bounds.height / 1.12]))
+            .snapPoint(at: .constant(self.isDrawerOpen ? [150, 450, UIScreen.main.bounds.height / 1.25] : [40]))
             .handlerBackground(.black.opacity(0.6))
             .edgesIgnoringSafeArea(.vertical)
         }

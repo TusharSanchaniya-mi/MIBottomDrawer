@@ -85,7 +85,7 @@ public extension MIBottomDrawer {
     ///   - content: The view that defines the drawer
     init(
         snapPoints: Binding<[CGFloat]> = .constant([0]),
-        startingHeight: CGFloat? = nil,
+        heights: CGFloat? = nil,
         showIndicator: Bool? = true,
         background: Color? = .white,
         drawerBackgroundColor: Color? = .clear,
@@ -100,8 +100,8 @@ public extension MIBottomDrawer {
             tempValue.insert(40.0, at: 0)
         }
         self._snapPoints = .constant(tempValue)
-        self._height = .init(initialValue: startingHeight ?? snapPoints.wrappedValue.first!)
-        self._restingHeight = .init(initialValue: startingHeight ?? snapPoints.wrappedValue.first!)
+        self._height = .init(initialValue: heights ?? snapPoints.wrappedValue.first!)
+        self._restingHeight = .init(initialValue: heights ?? snapPoints.wrappedValue.first!)
         self.showIndicator = showIndicator ?? true
         self.background = background ?? .white
         self.drawerBackgroundColor = drawerBackgroundColor ?? .clear
