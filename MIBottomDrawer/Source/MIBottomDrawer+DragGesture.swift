@@ -21,7 +21,7 @@ internal extension MIBottomDrawer {
             range: activeBound,
             spring: springHeight)
 
-        animation = .spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0.8)
+        animation = .spring(response: 0.5, dampingFraction: 0.65, blendDuration: 0.8)
     }
     
     func dragEnded(_ value: DragGesture.Value) {
@@ -31,7 +31,7 @@ internal extension MIBottomDrawer {
             - value.predictedEndLocation.y + restingHeight
         height = MIBottomDrawer.drawerCloseEndDrag(change, markers: snapPoints)
         restingHeight = height
-        animation = .spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0.8)
+        animation = .spring(response: 0.5, dampingFraction: 0.65, blendDuration: 0.8)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.impactGenerator?.impactOccurred()
         }

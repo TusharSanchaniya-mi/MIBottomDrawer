@@ -52,7 +52,7 @@ extension MIBottomDrawer {
                                 .foregroundColor(.gray.opacity(0.88))
                                 .frame(width: 40.0, height: self.showIndicator ? 6.0 : 0.0)
                         }
-                        .padding(.vertical, 15.0)
+                        .padding(.vertical, 20.0)
                         .frame(width: proxy.frame(in: .global).width)
                         .background(handlerBackground)
                         .clipShape(.rect(topLeadingRadius: 32, topTrailingRadius: 32))
