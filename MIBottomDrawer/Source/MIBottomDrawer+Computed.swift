@@ -61,6 +61,7 @@ extension MIBottomDrawer {
                             .padding(5)
                         Spacer()
                     }
+                    .padding(.horizontal, 5)
                     .frame(width: proxy.frame(in: .global).width)
                     .background(.clear)
                 }
